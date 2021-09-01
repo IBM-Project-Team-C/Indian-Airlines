@@ -41,8 +41,16 @@ public class Passenger {
 	@NotNull
 	private String gender;
 
+	@Column(name = "FLIGHT_ID")
+	@NotNull
+	private String flightId;
+
+	public Passenger() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Passenger(Integer passenger_id, @NotNull String first_name, @NotNull String last_name, @NotNull String email,
-			@NotNull Double phone, @NotNull Integer age, @NotNull String gender) {
+			@NotNull Double phone, @NotNull Integer age, @NotNull String gender, @NotNull String flightId) {
 		this.passenger_id = passenger_id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -50,10 +58,7 @@ public class Passenger {
 		this.phone = phone;
 		this.age = age;
 		this.gender = gender;
-	}
-
-	public Passenger() {
-		// TODO Auto-generated constructor stub
+		this.flightId = flightId;
 	}
 
 	public Integer getPassenger_id() {
@@ -112,9 +117,17 @@ public class Passenger {
 		this.gender = gender;
 	}
 
+	public String getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(String flightId) {
+		this.flightId = flightId;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(age, email, first_name, gender, last_name, passenger_id, phone);
+		return Objects.hash(age, email, first_name, flightId, gender, last_name, passenger_id, phone);
 	}
 
 	@Override
@@ -125,9 +138,9 @@ public class Passenger {
 			return false;
 		Passenger other = (Passenger) obj;
 		return Objects.equals(age, other.age) && Objects.equals(email, other.email)
-				&& Objects.equals(first_name, other.first_name) && Objects.equals(gender, other.gender)
-				&& Objects.equals(last_name, other.last_name) && Objects.equals(passenger_id, other.passenger_id)
-				&& Objects.equals(phone, other.phone);
+				&& Objects.equals(first_name, other.first_name) && Objects.equals(flightId, other.flightId)
+				&& Objects.equals(gender, other.gender) && Objects.equals(last_name, other.last_name)
+				&& Objects.equals(passenger_id, other.passenger_id) && Objects.equals(phone, other.phone);
 	}
 
 	@Override
@@ -147,6 +160,8 @@ public class Passenger {
 		builder.append(age);
 		builder.append(", gender=");
 		builder.append(gender);
+		builder.append(", flightId=");
+		builder.append(flightId);
 		builder.append("]");
 		return builder.toString();
 	}

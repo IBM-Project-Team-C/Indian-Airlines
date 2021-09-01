@@ -1,5 +1,6 @@
 package com.myapp.airlines.api;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +35,14 @@ public class FlightAPI {
 	@GetMapping("/search/departureDate={departureDate}/departureLocation={departureLocation}/arrivalLocation={arrivalLocation}")
 	public ResponseEntity<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(@PathVariable("departureDate") Optional<String> departureDate,
 			@PathVariable("departureLocation") Optional<String> departureLocation, @PathVariable("arrivalLocation") Optional<String> arrivalLocation){
+		
+//		 ResponseEntity<List<Flight>> flight = new ResponseEntity<List<Flight>>(flights.findByDepartureDateAndDepartureLocationAndArrivalLocation(departureDate.orElse(""), departureLocation.orElse(""), arrivalLocation.orElse("")).get(), HttpStatus.OK);
+//	        List<Flight> flightNew = new ArrayList<>();
+//	        flightNew.add(flight.getBody().get(0));
+//	        System.out.println(flight.getBody().get(0).getFlightId());
+//	        System.out.println(flightNew);
+		
+		
 	return new ResponseEntity<List<Flight>>
 	(flights.findByDepartureDateAndDepartureLocationAndArrivalLocation(departureDate.orElse(""), departureLocation.orElse(""), arrivalLocation.orElse("")).get(), HttpStatus.OK);
 	}
