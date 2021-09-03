@@ -9,9 +9,8 @@ import org.springframework.stereotype.Repository;
 import com.myapp.airlines.model.Booking;
 
 @Repository
-public interface BookingList extends JpaRepository<Booking, Integer>{
-	
+public interface BookingList extends JpaRepository<Booking, Integer> {
+
 	Optional<List<Booking>> findByFirstName(String name);
-	
 
 }

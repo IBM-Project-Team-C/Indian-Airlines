@@ -9,55 +9,52 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="flight")
+@Table(name = "flight")
 public class Flight {
-	
+
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "FLIGHT_ID")
 	public String flightId;
-	
+
 	@Column(name = "FLIGHT_NAME")
 	@NotNull
 	private String flightName;
-	
+
 	@Column(name = "ARRIVAL_DATE")
 	@NotNull
 	private String arrivalDate;
-	
+
 	@Column(name = "DEPARTURE_DATE")
 	@NotNull
 	private String departureDate;
-	
+
 	@Column(name = "ARRIVAL_TIME")
 	@NotNull
 	private String arrivalTime;
-	
+
 	@Column(name = "DEPARTURE_TIME")
 	@NotNull
 	private String departureTime;
-	
+
 	@Column(name = "ARRIVAL_LOCATION")
 	@NotNull
 	private String arrivalLocation;
-	
+
 	@Column(name = "DEPARTURE_LOCATION")
 	@NotNull
 	private String departureLocation;
-	
+
 	@Column(name = "FLIGHT_FARE")
 	@NotNull
 	private Integer flightFare;
-	
+
 	@Column(name = "AVAILABLE_SEATS")
 	@NotNull
 	private Integer availableSeats;
-	
-	
+
 	public Flight() {
 		// TODO Auto-generated constructor stub
 	}
-
 
 	public Flight(@NotNull String flightName, @NotNull String arrivalDate, @NotNull String departureDate,
 			@NotNull String arrivalTime, @NotNull String departureTime, @NotNull String arrivalLocation,
@@ -73,113 +70,91 @@ public class Flight {
 		this.availableSeats = availableSeats;
 	}
 
-
 	public String getFlightId() {
 		return flightId;
 	}
-
 
 	public void setFlightId(String flightId) {
 		this.flightId = flightId;
 	}
 
-
 	public String getFlightName() {
 		return flightName;
 	}
-
 
 	public void setFlightName(String flightName) {
 		this.flightName = flightName;
 	}
 
-
 	public String getArrivalDate() {
 		return arrivalDate;
 	}
-
 
 	public void setArrivalDate(String arrivalDate) {
 		this.arrivalDate = arrivalDate;
 	}
 
-
 	public String getDepartureDate() {
 		return departureDate;
 	}
-
 
 	public void setDepartureDate(String departureDate) {
 		this.departureDate = departureDate;
 	}
 
-
 	public String getArrivalTime() {
 		return arrivalTime;
 	}
-
 
 	public void setArrivalTime(String arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
 
-
 	public String getDepartureTime() {
 		return departureTime;
 	}
-
 
 	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
 
-
 	public String getArrivalLocation() {
 		return arrivalLocation;
 	}
-
 
 	public void setArrivalLocation(String arrivalLocation) {
 		this.arrivalLocation = arrivalLocation;
 	}
 
-
 	public String getDepartureLocation() {
 		return departureLocation;
 	}
-
 
 	public void setDepartureLocation(String departureLocation) {
 		this.departureLocation = departureLocation;
 	}
 
-
 	public Integer getFlightFare() {
 		return flightFare;
 	}
-
 
 	public void setFlightFare(Integer flightFare) {
 		this.flightFare = flightFare;
 	}
 
-
 	public Integer getAvailableSeats() {
 		return availableSeats;
 	}
 
-
 	public void setAvailableSeats(Integer availableSeats) {
 		this.availableSeats = availableSeats;
 	}
-
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(arrivalDate, arrivalLocation, arrivalTime, availableSeats, departureDate, departureLocation,
 				departureTime, flightFare, flightId, flightName);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -196,7 +171,6 @@ public class Flight {
 				&& Objects.equals(departureTime, other.departureTime) && Objects.equals(flightFare, other.flightFare)
 				&& Objects.equals(flightId, other.flightId) && Objects.equals(flightName, other.flightName);
 	}
-
 
 	@Override
 	public String toString() {
@@ -224,19 +198,4 @@ public class Flight {
 		builder.append("]");
 		return builder.toString();
 	}
-
-
-	
-
-	
-
-
-	
-	
-
-
-	
-	
-	
-
 }

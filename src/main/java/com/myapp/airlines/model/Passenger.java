@@ -9,22 +9,21 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="passangerdetails")
+@Table(name = "passangerdetails")
 public class Passenger {
-	
+
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "passenger_id")
 	private Integer passenger_id;
-	
+
 	@Column(name = "first_name")
 	@NotNull
 	private String first_name;
-	
+
 	@Column(name = "last_name")
 	@NotNull
 	private String last_name;
-	
+
 	@Column(name = "email")
 	@NotNull
 	private String email;
@@ -32,11 +31,11 @@ public class Passenger {
 	@Column(name = "phone")
 	@NotNull
 	private Double phone;
-	
+
 	@Column(name = "age")
 	@NotNull
 	private Integer age;
-	
+
 	@Column(name = "gender")
 	@NotNull
 	private String gender;
@@ -150,8 +149,4 @@ public class Passenger {
 		builder.append("]");
 		return builder.toString();
 	}
-	
-	
-	
-	
 }

@@ -15,7 +15,7 @@ public class Booking {
 	@Id
 	@Column(name = "BOOKING_ID")
 	public String bookingId;
-	
+
 	@Column(name = "FIRST_NAME")
 	public String firstName;
 
@@ -34,15 +34,15 @@ public class Booking {
 	@Column(name = "DEPARTURE_LOCATION")
 	@NotNull
 	private String departureLocation;
-	
+
 	@Column(name = "DEPARTURE_DATE")
 	@NotNull
 	private String departureDate;
-	
+
 	@Column(name = "ARRIVAL_LOCATION")
 	@NotNull
 	private String arrivalLocation;
-	
+
 	@Column(name = "ARRIVAL_DATE")
 	@NotNull
 	private String arrivalDate;
@@ -181,18 +181,4 @@ public class Booking {
 		builder.append("]");
 		return builder.toString();
 	}
-
-	
-
-	
-
-	
-
-	
-	
-
-
-
-	
-
 }

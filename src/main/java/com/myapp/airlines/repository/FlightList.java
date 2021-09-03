@@ -9,10 +9,11 @@ import org.springframework.stereotype.Repository;
 import com.myapp.airlines.model.Flight;
 
 @Repository
-public interface FlightList extends JpaRepository<Flight, Integer>{
-	
-	Optional<List<Flight>> findByFlightName(String flightName);
-	Optional<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(String departuredate, String departureLocation, String arrivalLocation);
+public interface FlightList extends JpaRepository<Flight, Integer> {
 
+	Optional<List<Flight>> findByFlightName(String flightName);
+
+	Optional<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(String departuredate,
+			String departureLocation, String arrivalLocation);
 
 }

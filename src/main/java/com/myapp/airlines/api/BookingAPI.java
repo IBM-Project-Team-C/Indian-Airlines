@@ -1,4 +1,5 @@
 package com.myapp.airlines.api;
+
 import java.sql.*;
 import java.util.List;
 
@@ -15,23 +16,24 @@ import com.myapp.airlines.repository.BookingList;
 
 @RestController
 @RequestMapping("/api/v1/bookingdetails")
-public class BookingAPI extends TravellerDetailsAPI{
-	
+public class BookingAPI extends TravellerDetailsAPI {
+
 	@Autowired
 	private BookingList booking;
 
 	@GetMapping("passenger/{firstName}")
-	public ResponseEntity<List<Booking>> findByFirstName(@PathVariable("firstName") String name){
+	public ResponseEntity<List<Booking>> findByFirstName(@PathVariable("firstName") String name) {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		   
+
 		try {
 			String bookingId = passengerId + flightId;
-			System.out.println(bookingId+ firstName + lastName + flightName + flightId + departureLoc + departureD + arrivalLoc + arrivalD);
+			System.out.println(bookingId + firstName + lastName + flightName + flightId + departureLoc + departureD
+					+ arrivalLoc + arrivalD);
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airlines", "root", "root");
 			String query = "INSERT INTO booking(BOOKING_ID, FIRST_NAME, LAST_NAME,FLIGHT_NAME, FLIGHT_ID, DEPARTURE_LOCATION, DEPARTURE_DATE, ARRIVAL_LOCATION, ARRIVAL_DATE) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
 			PreparedStatement myInsert = con.prepareStatement(query);
@@ -51,6 +53,5 @@ public class BookingAPI extends TravellerDetailsAPI{
 		}
 		return new ResponseEntity<List<Booking>>(booking.findByFirstName(name).get(), HttpStatus.OK);
 	}
-	
 
 }
