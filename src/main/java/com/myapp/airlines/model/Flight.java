@@ -58,7 +58,7 @@ public class Flight {
 
 	public Flight(@NotNull String flightName, @NotNull String arrivalDate, @NotNull String departureDate,
 			@NotNull String arrivalTime, @NotNull String departureTime, @NotNull String arrivalLocation,
-			@NotNull String departureLocation, @NotNull Integer flightFare, @NotNull Integer availableSeats) {
+			@NotNull String departureLocation, String string, @NotNull Integer flightFare, @NotNull Integer availableSeats) {
 		this.flightName = flightName;
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
