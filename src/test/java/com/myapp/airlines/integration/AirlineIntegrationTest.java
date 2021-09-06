@@ -46,7 +46,7 @@ import com.myapp.airlines.repository.PassengerList;
 @SpringBootTest
 
 
-@AutoConfigureMockMvc(addFilters = false)
+@AutoConfigureMockMvc
 public class AirlineIntegrationTest {
 	
 	@Autowired
@@ -80,7 +80,7 @@ public class AirlineIntegrationTest {
 	@DisplayName("Test Booking by Id - GET /api/v1/Flight")
 	public void testGetBookingById() throws Exception {
 		
-		mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/flight/{FlightName}","AI16H"))
+		mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/flight/{FlightName}","INDIGO"))
 		// Validate Status should be 200 OK and JSON response received
 		.andExpect(status().isOk())
 		.andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
