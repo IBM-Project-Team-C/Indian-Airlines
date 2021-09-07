@@ -40,6 +40,9 @@ public class Passenger {
 	@NotNull
 	private String gender;
 
+	
+
+
 	public Passenger(Integer passenger_id, @NotNull String first_name, @NotNull String last_name, @NotNull String email,
 			@NotNull String phone, @NotNull Integer age, @NotNull String gender) {
 		this.passenger_id = passenger_id;
@@ -149,4 +152,6 @@ public class Passenger {
 		builder.append("]");
 		return builder.toString();
 	}
+
+	
 }

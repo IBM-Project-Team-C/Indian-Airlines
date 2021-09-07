@@ -56,9 +56,13 @@ public class Flight {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Flight(@NotNull String flightName, @NotNull String arrivalDate, @NotNull String departureDate,
-			@NotNull String arrivalTime, @NotNull String departureTime, @NotNull String arrivalLocation,
-			@NotNull String departureLocation, String string, @NotNull Integer flightFare, @NotNull Integer availableSeats) {
+	
+
+	public Flight(String flightId, @NotNull String flightName, @NotNull String arrivalDate,
+			@NotNull String departureDate, @NotNull String arrivalTime, @NotNull String departureTime,
+			@NotNull String arrivalLocation, @NotNull String departureLocation, @NotNull Integer flightFare,
+			@NotNull Integer availableSeats) {
+		this.flightId = flightId;
 		this.flightName = flightName;
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
@@ -69,6 +73,8 @@ public class Flight {
 		this.flightFare = flightFare;
 		this.availableSeats = availableSeats;
 	}
+
+
 
 	public String getFlightId() {
 		return flightId;
