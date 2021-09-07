@@ -26,7 +26,6 @@ public class Booking {
 	private String flightName;
 
 	@Column(name = "FLIGHT_ID")
-//	@NotNull
 	private String flightId;
 
 	@Column(name = "DEPARTURE_LOCATION")
