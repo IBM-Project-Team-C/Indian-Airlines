@@ -30,7 +30,7 @@ public class Passenger {
 
 	@Column(name = "phone")
 	@NotNull
-	private Double phone;
+	private String phone;
 
 	@Column(name = "age")
 	@NotNull
@@ -40,8 +40,12 @@ public class Passenger {
 	@NotNull
 	private String gender;
 
+	public Passenger() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Passenger(Integer passenger_id, @NotNull String first_name, @NotNull String last_name, @NotNull String email,
-			@NotNull Double phone, @NotNull Integer age, @NotNull String gender) {
+			@NotNull String phone, @NotNull Integer age, @NotNull String gender) {
 		this.passenger_id = passenger_id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -49,10 +53,6 @@ public class Passenger {
 		this.phone = phone;
 		this.age = age;
 		this.gender = gender;
-	}
-
-	public Passenger() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getPassenger_id() {
@@ -87,11 +87,11 @@ public class Passenger {
 		this.email = email;
 	}
 
-	public Double getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Double phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -149,4 +149,6 @@ public class Passenger {
 		builder.append("]");
 		return builder.toString();
 	}
+	
+	
 }

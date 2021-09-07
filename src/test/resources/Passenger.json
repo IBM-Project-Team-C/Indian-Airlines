@@ -1,0 +1,32 @@
+[
+  {
+    "passenger_id": 12,
+    "first_name": "Yashika",
+    "last_name": "Awasthi",
+    "email": "awasthiyashika8@gmail.com",
+    "phone": "7610183735",
+    "age": 22,
+    "gender": "Female"
+   
+  },
+  {
+    "passenger_id": 14,
+    "first_name": "Shreya",
+    "last_name": "Mishra",
+    "email": "shreyamishra8@gmail.com",
+    "phone": "7610185663",
+    "age": 22,
+    "gender": "Female"
+  },
+  {
+    "passenger_id": 13,
+    "first_name": "Vidushi",
+    "last_name": "Vyas",
+    "email": "Vidushivyash8@gmail.com",
+    "phone": "83154315663",
+    "age": 22,
+    "gender": "Female"
+  }
+ 
+  
+]

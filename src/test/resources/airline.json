@@ -1,0 +1,62 @@
+[
+  {
+    "flightId": "AI16H",
+    "flightName": "INDIGO",
+    "arrivalDate": "2021-08-30",
+    "departureDate": "2021-08-30",
+    "arrivalTime": "14:55",
+    "departureTime": "16:30",
+    "arrivalLocation": "JODHPUR",
+    "departureLocation": "MUMBAI",
+    "flightFare": 8757,
+    "availableSeats": 1
+  },
+  {
+    "flightId": "IT25H",
+    "flightName": "AIR INDIA",
+    "arrivalDate": "2021-08-31",
+    "departureDate": "2021-08-31",
+    "arrivalTime": "14:20",
+    "departureTime": "15:30",
+    "arrivalLocation": "MUMBAI",
+    "departureLocation": "RAJKOT",
+    "flightFare": 5757,
+    "availableSeats": 10
+  },
+  {
+    "flightId": "PQ12W",
+    "flightName": "VISTARA",
+    "arrivalDate": "2021-09-14",
+    "departureDate": "2021-09-14",
+    "arrivalTime": "07:20",
+    "departureTime": "09:05",
+    "arrivalLocation": "AHMEDABABAD",
+    "departureLocation": "HYDERABAD",
+    "flightFare": 6781,
+    "availableSeats": 15
+  },
+  {
+    "flightId": "RF12E",
+    "flightName": "SPICEJET",
+    "arrivalDate": "2021-09-20",
+    "departureDate": "2021-09-20",
+    "arrivalTime": "17:40",
+    "departureTime": "20:05",
+    "arrivalLocation": "KOLKATA",
+    "departureLocation": "CHINA",
+    "flightFare": 2966,
+    "availableSeats": 7
+  },
+  {
+    "flightId": "YU76B",
+    "flightName": "AIR INDIA",
+    "arrivalDate": "2021-08-31",
+    "departureDate": "2021-08-31",
+    "arrivalTime": "08:20",
+    "departureTime": "10:30",
+    "arrivalLocation": "BENGALURU",
+    "departureLocation": "NEW DELHI",
+    "flightFare": 8958,
+    "availableSeats": 8
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "bookingId": "01EFR",
+    "firstName": "Yashika",
+    "lastName": "Awasthi",
+    "flightName": "INDIGO",
+    "flightId": "AI16H",
+    "departureLocation": "MUMBAI",
+    "departureDate": "2021-08-30",
+    "arrivalLocation": "JODHPUR",
+    "arrivalDate": "2021-08-30"
+    
+  },
+  {
+    "bookingId": "01EFR",
+    "firstName": "Shreya",
+    "lastName": "Mishra",
+    "flightName": "AIR INDIA",
+    "flightId": "IT25H",
+    "departureLocation": "RAJKOT",
+    "departureDate": "2021-08-31",
+    "arrivalLocation": "MUMBAI",
+    "arrivalDate": "2021-08-31"
+  },
+  {
+    "bookingId": "02ER1",
+    "firstName": "Vidushi",
+    "lastName": "Vyas",
+    "flightName": "SPICEJET",
+    "flightId": "RF12E",
+    "departureLocation": "CHINA",
+    "departureDate": "2021-09-20",
+    "arrivalLocation": "KOLKATA",
+    "arrivalDate": "2021-09-20"
+  }
+ 
+  
+]
