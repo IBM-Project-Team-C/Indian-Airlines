@@ -20,11 +20,9 @@ public class Booking {
 	public String firstName;
 
 	@Column(name = "LAST_NAME")
-//	@NotNull
 	private String lastName;
 
 	@Column(name = "FLIGHT_NAME")
-//	@NotNull
 	private String flightName;
 
 	@Column(name = "FLIGHT_ID")
