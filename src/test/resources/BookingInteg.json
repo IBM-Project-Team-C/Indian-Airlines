@@ -1,0 +1,13 @@
+[
+  {
+    "bookingId": "01EFR",
+    "firstName": "Yashika",
+    "lastName": "Awasthi",
+    "flightName": "INDIGO",
+    "flightId": "AI16H",
+    "departureLocation": "MUMBAI",
+    "departureDate": "2021-08-30",
+    "arrivalLocation": "JODHPUR",
+    "arrivalDate": "2021-08-30" 
+  }
+]
