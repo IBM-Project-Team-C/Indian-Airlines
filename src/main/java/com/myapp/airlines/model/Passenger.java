@@ -30,7 +30,7 @@ public class Passenger {
 
 	@Column(name = "phone")
 	@NotNull
-	private  String phone;
+	private String phone;
 
 	@Column(name = "age")
 	@NotNull
@@ -40,7 +40,10 @@ public class Passenger {
 	@NotNull
 	private String gender;
 
-	
+
+	public Passenger() {
+		// TODO Auto-generated constructor stub
+	}
 
 
 	public Passenger(Integer passenger_id, @NotNull String first_name, @NotNull String last_name, @NotNull String email,
@@ -52,10 +55,6 @@ public class Passenger {
 		this.phone = phone;
 		this.age = age;
 		this.gender = gender;
-	}
-
-	public Passenger() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getPassenger_id() {
