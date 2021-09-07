@@ -1,0 +1,32 @@
+[
+	
+{
+"passenger_id" : 3,
+"first_name" : "Shru",
+"last_name" : "kulkarni",
+"email" : "shruthip15.sk@gmail.com",
+"phone" : 8095287512,
+"age" : 21,
+"gender" : "F"
+},
+
+{
+"passenger_id" : 9,
+"first_name" : "Shalini",
+"last_name" : "bai",
+"email" : "shalini.sk@gmail.com",
+"phone" : 8095007512,
+"age" : 21,
+"gender" : "F"
+},
+
+{
+"passenger_id" : 6,
+"first_name" : "Roopa",
+"last_name" : "S",
+"email" : "roopa@gmail.com",
+"phone" : 9095287512,
+"age" : 31,
+"gender" : "F"
+}
+]

@@ -8,8 +8,7 @@
     "departureLocation": "MUMBAI",
     "departureDate": "2021-08-30",
     "arrivalLocation": "JODHPUR",
-    "arrivalDate": "2021-08-30"
-    
+    "arrivalDate": "2021-08-30" 
   },
   {
     "bookingId": "01EFR",
@@ -33,6 +32,4 @@
     "arrivalLocation": "KOLKATA",
     "arrivalDate": "2021-09-20"
   }
- 
-  
 ]
