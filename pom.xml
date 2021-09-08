@@ -12,6 +12,7 @@
 	<groupId>Indian-Airlines</groupId>
 	<artifactId>Indian-Airlines</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>Indian-Airlines</name>
 	<description>Indian Airlines</description>
 	<properties>
@@ -35,7 +36,7 @@
 		<connection>scm:git:git@github.com:IBM-Project-Team-C/Indian-Airlines.git</connection>
 		<developerConnection>scm:git:git@github.com:IBM-Project-Team-C/Indian-Airlines.git</developerConnection>
 		<url>git@github.com:IBM-Project-Team-C/Indian-Airlines.git</url>
-		<tag>v0.0.1</tag> 
+		<tag>v0.0.1</tag>
 	</scm>
 	<dependencies>
 		<dependency>
