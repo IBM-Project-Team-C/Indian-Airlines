@@ -46,6 +46,14 @@ bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify/)
 
 }
 
+stage('Sonar') {
+      if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' sonar:sonar"
+      } else {
+         bat(/"${mvnHome}\bin\mvn" sonar:sonar/)
+      }
+   }
+
 
 stage('Deploy') {
 
