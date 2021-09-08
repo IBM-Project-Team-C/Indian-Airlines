@@ -53,7 +53,12 @@ stage('Sonar') {
          bat(/"${mvnHome}\bin\mvn" sonar:sonar/)
       }
    }
+   
+stage("Smoke Test"){
 
+sh 'curl --retry-delay 10 --retry 5 "http://localhost:5050/ibmdevops/api/v1/flight"';
+
+}
 
 stage('Deploy') {
 
@@ -61,11 +66,7 @@ sh 'curl -u admin:admin -T target/**.war "http://localhost:5050/manager/text/dep
 
 }
 
-stage("Smoke Test"){
 
-sh 'curl --retry-delay 10 --retry 5 "http://localhost:5050/ibmdevops/api/v1/flight"';
-
-}
 
 stage('Publish') {
       def server = Artifactory.server 'Artifactory'
