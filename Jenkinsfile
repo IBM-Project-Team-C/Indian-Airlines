@@ -4,7 +4,7 @@ def mvnHome
 
 stage('Prepare') {
 
-git url: 'git@github.com:Yashika832/product-app.git', branch: 'develop'
+git url: 'git@github.com:IBM-Project-Team-C/Indian-Airlines.git', branch: 'Integrated-branch'
 
 mvnHome = tool 'mvn'
 
