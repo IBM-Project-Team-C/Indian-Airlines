@@ -4,7 +4,7 @@ def mvnHome
 
 stage('Prepare') {
 
-git url: 'git@github.com:IBM-Project-Team-C/Indian-Airlines.git', branch: 'Integrated-branch'
+git url: 'git@github.com:IBM-Project-Team-C/Indian-Airlines.git', branch: 'final-branch'
 
 mvnHome = tool 'mvn'
 
@@ -46,11 +46,7 @@ bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify/)
 
 }
 
-stage("Smoke Test"){
 
-sh 'curl --retry-delay 10 --retry 5 "http://localhost:5050/ibmdevops/api/v1/flight"';
-
-}
 
 stage('Sonar') {
       if (isUnix()) {
@@ -62,11 +58,6 @@ stage('Sonar') {
    
 
 
-stage('Deploy') {
-
-sh 'curl -u admin:admin -T target/**.war "http://localhost:5050/manager/text/deploy?path=/ibmdevops&update=true"';
-
-}
 
  stage ('Build Docker Image') {
            if (isUnix()) {
