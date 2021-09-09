@@ -68,7 +68,25 @@ sh 'curl -u admin:admin -T target/**.war "http://localhost:5050/manager/text/dep
 
 }
 
-
+ stage ('Build Docker Image') {
+           if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' k8s:build k8s:resource"
+      } else {
+         bat(/"${mvnHome}\bin\mvn" k8s:build k8s:resource/)
+      }
+                
+            
+        }
+		
+		stage ('Kubernetes Deploy') {
+           
+             if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' k8s:deploy"
+            }
+            else {
+         bat(/"${mvnHome}\bin\mvn" k8s:deploy/)
+      }
+        }
 
 stage('Publish') {
       def server = Artifactory.server 'Artifactory'
