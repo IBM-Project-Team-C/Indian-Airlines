@@ -1,0 +1,30 @@
+[
+{
+        "bookingId" : 1,
+        "firstName" : "Yash",
+        "lastName" : "Awasthi",
+        "flightName" : "Indigo",
+        "flightId" : "AI164",
+        "departureLocation" : "jodhpur",
+      "departureDate": "Male",
+      "arrivalLocation": "Mumbai",
+      "arrivalDate": "2021-08-30"
+
+    
+},
+
+{
+
+          "bookingId" : 2,
+        "firstName" : "Shruthi",
+        "lastName" : "kulkarni",
+        "flightName" : "AIR INDIA",
+        "flightId" : "IT25H",
+        "departureLocation" : "mumbai",
+        "departureDate": "2021-08-31",
+      "arrivalLocation": "jodhpur",
+      "arrivalDate": "2021-08-31"
+      
+
+}
+]
