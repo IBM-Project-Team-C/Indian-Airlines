@@ -34,7 +34,7 @@ public class BookingAPI extends TravellerDetailsAPI {
 			System.out.println(bookingId + firstName + lastName + flightName + flightId + departureLoc + departureD
 					+ arrivalLoc + arrivalD);
 //			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airlines", "root", "root");
-			String query = "INSERT INTO booking(BOOKING_ID, FIRST_NAME, LAST_NAME,FLIGHT_NAME, FLIGHT_ID, DEPARTURE_LOCATION, DEPARTURE_DATE, ARRIVAL_LOCATION, ARRIVAL_DATE) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
+			String query = "REPLACE INTO booking(BOOKING_ID, FIRST_NAME, LAST_NAME,FLIGHT_NAME, FLIGHT_ID, DEPARTURE_LOCATION, DEPARTURE_DATE, ARRIVAL_LOCATION, ARRIVAL_DATE) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 			template.update(query, bookingId,firstName,lastName,flightName,flightId,departureLoc,departureD,arrivalLoc,arrivalD);
 			//PreparedStatement myInsert = con.prepareStatement(query);
