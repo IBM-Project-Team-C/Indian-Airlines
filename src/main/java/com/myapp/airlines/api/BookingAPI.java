@@ -38,15 +38,6 @@ public class BookingAPI extends TravellerDetailsAPI {
 
 			template.update(query, bookingId,firstName,lastName,flightName,flightId,departureLoc,departureD,arrivalLoc,arrivalD);
 			
-			bookingId = "";
-			firstName = "";
-			lastName = "";
-			flightName = "";
-			flightId = "";
-			departureLoc = "";
-			departureD = "";
-			arrivalLoc = "";
-			arrivalD = "";
 			
 
 		
