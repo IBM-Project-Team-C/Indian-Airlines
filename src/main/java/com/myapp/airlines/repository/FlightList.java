@@ -9,10 +9,16 @@ import org.springframework.stereotype.Repository;
 import com.myapp.airlines.model.Flight;
 
 @Repository
+<<<<<<< HEAD
 public interface FlightList extends JpaRepository<Flight, String>{
 	
-	Optional<List<Flight>> findByFlightName(String flightName);
-	Optional<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(String departuredate, String departureLocation, String arrivalLocation);
+=======
+public interface FlightList extends JpaRepository<Flight, String> {
 
+>>>>>>> origin/final-branch
+	Optional<List<Flight>> findByFlightName(String flightName);
+
+	Optional<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(String departuredate,
+			String departureLocation, String arrivalLocation);
 
 }

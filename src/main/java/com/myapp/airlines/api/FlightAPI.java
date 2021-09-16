@@ -18,20 +18,20 @@ import com.myapp.airlines.repository.FlightList;
 @RequestMapping("/api/v1/flight")
 public class FlightAPI {
 	public static String flightName, flightId, departureLoc, departureD, arrivalLoc, arrivalD;
-	
+
 	@Autowired
 	private FlightList flights;
-	
+
 	@GetMapping
-	public ResponseEntity<List<Flight>> findAll(){
+	public ResponseEntity<List<Flight>> findAll() {
 		return new ResponseEntity<List<Flight>>(flights.findAll(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("search/{flightName}")
-	public ResponseEntity<List<Flight>> findByFlightName(@PathVariable("flightName")String flightName){
+	public ResponseEntity<List<Flight>> findByFlightName(@PathVariable("flightName") String flightName) {
 		return new ResponseEntity<List<Flight>>(flights.findByFlightName(flightName).get(), HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/search/departureDate={departureDate}/departureLocation={departureLocation}/arrivalLocation={arrivalLocation}")
 	public ResponseEntity<List<Flight>> findByDepartureDateAndDepartureLocationAndArrivalLocation(
 			@PathVariable("departureDate") Optional<String> departureDate,
@@ -42,7 +42,7 @@ public class FlightAPI {
 				flights.findByDepartureDateAndDepartureLocationAndArrivalLocation(departureDate.orElse(""),
 						departureLocation.orElse(""), arrivalLocation.orElse("")).get(),
 				HttpStatus.OK);
-		
+
 		flightName = flight.getBody().get(0).getFlightName();
 		flightId = flight.getBody().get(0).getFlightId();
 		departureLoc = flight.getBody().get(0).getDepartureLocation();
@@ -56,5 +56,5 @@ public class FlightAPI {
 						departureLocation.orElse(""), arrivalLocation.orElse("")).get(),
 				HttpStatus.OK);
 	}
-	
+
 }

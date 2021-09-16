@@ -15,45 +15,41 @@ public class Booking {
 	@Id
 	@Column(name = "BOOKING_ID")
 	public String bookingId;
-	
+
 	@Column(name = "FIRST_NAME")
 	public String firstName;
 
 	@Column(name = "LAST_NAME")
-	@NotNull
 	private String lastName;
 
 	@Column(name = "FLIGHT_NAME")
-	@NotNull
 	private String flightName;
 
 	@Column(name = "FLIGHT_ID")
-	@NotNull
 	private String flightId;
 
 	@Column(name = "DEPARTURE_LOCATION")
-	@NotNull
+//	@NotNull
 	private String departureLocation;
-	
+
 	@Column(name = "DEPARTURE_DATE")
-	@NotNull
+//	@NotNull
 	private String departureDate;
-	
+
 	@Column(name = "ARRIVAL_LOCATION")
-	@NotNull
 	private String arrivalLocation;
-	
+
 	@Column(name = "ARRIVAL_DATE")
-	@NotNull
 	private String arrivalDate;
 
 	public Booking() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Booking(String bookingId, String firstName, @NotNull String lastName, @NotNull String flightName,
-			@NotNull String flightId, @NotNull String departureLocation, @NotNull String departureDate,
-			@NotNull String arrivalLocation, @NotNull String arrivalDate) {
+	
+	public Booking(String bookingId, String firstName,String lastName,  String flightName,
+			 String flightId,  String departureLocation,  String departureDate,
+			 String arrivalLocation,  String arrivalDate) {
 		this.bookingId = bookingId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -64,6 +60,12 @@ public class Booking {
 		this.arrivalLocation = arrivalLocation;
 		this.arrivalDate = arrivalDate;
 	}
+
+
+
+
+
+
 
 	public String getBookingId() {
 		return bookingId;
@@ -181,18 +183,4 @@ public class Booking {
 		builder.append("]");
 		return builder.toString();
 	}
-
-	
-
-	
-
-	
-
-	
-	
-
-
-
-	
-
 }
